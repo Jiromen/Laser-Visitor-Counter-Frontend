@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Control Arduino</title>
+	<script src="MVC/view/switch.js"></script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Visitor Counter System</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+   
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="MVC/view/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="MVC/view/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="MVC/view/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="MVC/view/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="MVC/view/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="MVC/view/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="MVC/view/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet" type="text/css" href="MVC/view/assets/css/custom.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="MVC/view/bootstrap/css/bootstrap.min.css">
+  <link href="MVC/view/assets/css/style.css" rel="stylesheet">
+  
+<!-- Main BG -->
+  <style>
+ #hero {
+  width: 100%;
+  min-height: 100vh;
+  background: url("MVC/view/assets/img/RB.jpg") top center;
+  background-size: cover;
+  position: relative;/
+}
+</style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+   
+  </header>
+
+  
+<form action="MVC/controller/Controller.py" method="post">
+  <section id="hero" class="d-flex align-items-center justify-content-center">
+  
+    <div class="container" data-aos="fade-up">
+
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-xl-6 col-lg-8">
+          <h1>Visitor Counter System<span>.</span></h1>
+        </div>
+      </div>
+
+      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+        
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="bi bi-lightbulb-fill"></i>
+            <h3> <button id="onButton" class="btn btn-transparent text-light" type="button" onclick="controlArduino('on')">Turn On</button></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+           <i class="bi bi-lightbulb"></i>
+            <h3> <button id="offButton" class="btn btn-transparent text-light" type="button" onclick="controlArduino('off')">Turn Off</button></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="bi bi-database"></i>
+            <h3><a><button type="submit" class="btn btn-transparent text-light" name="ALL" value="Records">Records</button></h3>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+  </section>
+</form>
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+      
+          
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+            <h3>About Our Visitor Counter System</h3>
+            <p class="fst-italic">
+              Welcome to the future of visitor tracking! Our Visitor Counter System isn't just a device; it's a simple and accurate way to count people effortlessly.
+            </p>
+
+            <p class="fst-italic">
+              Imagine a small, high-tech device that uses a laser to count every person who walks by. It's quiet, discreet, and accurate, eliminating the need for manual clickers and guesswork. Enjoy easy, reliable tracking with minimal effort.
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Accurate Counting: Our counter uses a precise laser sensor to reliably track the number of visitors.</li>
+              <li><i class="ri-check-double-line"></i> Discreet Design: The laser beam is safe and unobtrusive, ensuring it doesn't interfere with your visitors' experience.</li>
+              <li><i class="ri-check-double-line"></i> Real-Time Data: Provides immediate counts, helping you manage visitor flow and optimize your space efficiently.</li>
+               
+            </ul>
+            <p>
+              Perfect for museums, retail stores, libraries, or any place where knowing visitor numbers is important, our Laser Visitor Counter is your go-to solution. It’s not just a counter; it’s your new best friend in visitor management, working tirelessly around the clock.
+            </p>
+          </div>
+       
+
+      </div>
+    </section>
+
+  
+
+     <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+         
+          <p>Check our Team</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-12		  col-md-5 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="MVC/view/assets/img/byangka.jpg" class="img-fluid" alt="">
+               
+              </div>
+              <div class="member-info">
+                <h4>Bianca Nazareno</h4>
+                <span>Leader</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-5 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
+              <div class="member-img">
+                <img src="MVC/view/assets/img/ian.jpg" class="img-fluid" alt="">
+                
+              </div>
+              <div class="member-info">
+                <h4>Ian James Mendoza</h4>
+                <span>Hardware King</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-5 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+              <div class="member-img">
+                <img src="MVC/view/assets/img/romel.jpg" class="img-fluid" alt="">
+               
+              </div>
+              <div class="member-info">
+                <h4>Romel Joshua Escote</h4>
+                <span>Database God</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-5 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              <div class="member-img">
+                <img src="MVC/view/assets/img/jiro.jpg" class="img-fluid" alt="">
+                
+              </div>
+              <div class="member-info">
+                <h4>Jiro</h4>
+                <span>Lord of HTML</span>
+              </div>
+            </div>
+          </div>
+		
+		<div class="col-lg-2 col-md-5 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              <div class="member-img">
+                <img src="MVC/view/assets/img/uan.jpg" class="img-fluid" alt="">
+                
+              </div>
+              <div class="member-info">
+                <h4>Julian Manuel Jimenez</h4>
+                <span>Pancit Canton Enjoyer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+   
+
+  </main><!-- End #main -->
+
+ <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container credits">
+	<br>
+      <h6><i><span>&#169</span>  Nazareno, Mendoza, Escote, Jimenez, Madrid </i> </h6>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="MVC/view/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="MVC/view/assets/vendor/aos/aos.js"></script>
+  <script src="MVC/view/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="MVC/view/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="MVC/view/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="MVC/view/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="MVC/view/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="MVC/view/assets/js/main.js"></script>
+
+</body>
+
+</html>
